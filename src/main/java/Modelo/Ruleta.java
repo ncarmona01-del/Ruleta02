@@ -1,16 +1,28 @@
 package Modelo;
 
-import java.util.Random;
+import java.util.*;
 
 public class Ruleta {
+    private List<Integer> numeros;
+    private List<String> colores;
+    private Random random;
 
-    private static final String[] COLORES = {"Rojo", "Negro"};
-    private static final int NUMEROS_MAX = 36;
-    private static final Random random = new Random();
 
-    public String girar() {
-        int numero = random.nextInt(NUMEROS_MAX + 1); // Números de 0 a 36
-        String color = (numero == 0) ? "Verde" : COLORES[random.nextInt(COLORES.length)];
-        return "Número: " + numero + ", Color: " + color;
+    public Ruleta() {
+        numeros = new ArrayList<>();
+        for (int i = 0; i <= 36; i++) {
+            numeros.add(i);
+        }
+        colores = Arrays.asList("Rojo", "Negro");
+
+        random = new Random();
+    }
+
+    public int numeroAlAzar() {
+        return numeros.get(random.nextInt(numeros.size()));
+    }
+
+    public String colorAlAzar() {
+        return colores.get(random.nextInt(colores.size()));
     }
 }
