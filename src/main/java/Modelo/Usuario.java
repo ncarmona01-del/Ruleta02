@@ -9,19 +9,20 @@ public class Usuario {
         this.contraseña = contraseña;
     }
 
-    public String getNombreUsuario() {
+    public String getnombreUsuario() {
         return nombreUsuario;
     }
+
     public String getContraseña() {
         return contraseña;
     }
-    public void setNombreUsuario(String nombreUsuario) {
+    public void setNombreUsuario(String nombreUsuario)
+    {
         this.nombreUsuario = nombreUsuario;
     }
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
     }
-
 }
 
 
